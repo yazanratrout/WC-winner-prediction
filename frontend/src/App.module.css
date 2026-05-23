@@ -1,0 +1,97 @@
+:root {
+  --bg: #080c14;
+  --bg2: #0d1420;
+  --surface: rgba(255,255,255,0.04);
+  --surface-hover: rgba(255,255,255,0.07);
+  --glass: rgba(13,20,32,0.8);
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+  --text: #e8edf5;
+  --muted: #7a8899;
+  --accent: #4f9eff;
+  --accent2: #7c6fff;
+  --green: #34d399;
+  --yellow: #fbbf24;
+  --red: #f87171;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --bronze: #cd7f32;
+
+  /* Stage colours */
+  --c-qualify: #34d399;
+  --c-r16: #4f9eff;
+  --c-qf: #a78bfa;
+  --c-sf: #fb923c;
+  --c-final: #f87171;
+  --c-winner: #ffd700;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,158,255,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(124,111,255,0.08) 0%, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.shell { display: flex; flex-direction: column; min-height: 100vh; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 1.5rem;
+  height: 56px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--gold) 0%, #ffaa00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.nav a:hover { background: var(--surface-hover); color: var(--text); }
+.active { color: var(--text) !important; background: rgba(79,158,255,0.12) !important; }
+
+.main { flex: 1; padding: 1.75rem 1.5rem; max-width: 1280px; margin: 0 auto; width: 100%; }
+
+/* Shared card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+}

@@ -1,0 +1,55 @@
+.loading { display: flex; align-items: center; gap: 10px; color: var(--muted); padding: 3rem; justify-content: center; }
+.spinner { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.pageHeader { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem; }
+.title { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem; }
+.sub { color: var(--muted); font-size: 0.875rem; }
+.sectionTitle { font-size: 1rem; font-weight: 700; margin: 1.75rem 0 0.75rem; }
+
+.viewToggle { display: flex; gap: 4px; background: rgba(255,255,255,0.05); border-radius: 10px; padding: 3px; }
+.viewBtn { background: transparent; border: none; border-radius: 8px; color: var(--muted); font-size: 0.825rem; padding: 6px 14px; cursor: pointer; }
+.viewBtn:hover { color: var(--text); }
+.viewBtnActive { background: rgba(79,158,255,0.15); color: var(--accent); border: none; border-radius: 8px; font-size: 0.825rem; padding: 6px 14px; cursor: pointer; font-weight: 600; }
+
+.legend { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.legendItem { display: flex; align-items: center; gap: 5px; font-size: 0.8rem; color: var(--muted); }
+.legendDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Visual grid */
+.visualGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.teamCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  transition: border-color 0.2s, transform 0.15s, background 0.15s;
+}
+.teamCard:hover { border-color: var(--border-strong); transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+
+.cardTop { display: flex; align-items: center; gap: 12px; }
+.cardRank { font-size: 0.8rem; color: var(--muted); width: 18px; flex-shrink: 0; text-align: right; }
+.cardInfo { flex: 1; min-width: 0; }
+.cardName { font-size: 1rem; font-weight: 700; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cardGroup { font-size: 0.72rem; color: var(--muted); margin-top: 2px; display: block; }
+.cardWinBlock { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; }
+.cardWinPct { font-size: 1.6rem; font-weight: 900; line-height: 1; }
+.cardWinLabel { font-size: 0.68rem; color: var(--muted); margin-top: 2px; }
+
+.cardDivider { height: 1px; background: var(--border); margin: 1rem 0; }
+
+.cardBars { display: flex; flex-direction: column; gap: 9px; }
+.cardBarRow { display: flex; align-items: center; gap: 10px; }
+.cardBarLabel { font-size: 0.75rem; font-weight: 600; width: 100px; flex-shrink: 0; }
+.cardBarTrack { flex: 1; }
+

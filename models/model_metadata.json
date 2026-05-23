@@ -1,0 +1,78 @@
+{
+  "best_model": "XGB",
+  "feature_cols": [
+    "diff_form_5",
+    "diff_form_10",
+    "diff_goals_scored_10",
+    "diff_goals_conceded_10",
+    "diff_gd_trend_10",
+    "diff_clean_sheet_rate_10",
+    "diff_home_win_rate",
+    "diff_away_win_rate",
+    "diff_vs_top20_win_rate",
+    "diff_avg_squad_rating",
+    "diff_gk_rating",
+    "diff_def_rating",
+    "diff_mid_rating",
+    "diff_fwd_rating",
+    "diff_squad_depth",
+    "diff_injury_impact",
+    "diff_avg_age",
+    "diff_market_value_total_m",
+    "diff_caps_proxy",
+    "diff_same_club_pairs",
+    "diff_avg_shared_club",
+    "diff_lineup_stability",
+    "diff_shared_apps_proxy",
+    "diff_def_familiarity",
+    "diff_chemistry_score",
+    "diff_xg_scored_10",
+    "diff_xg_conceded_10",
+    "diff_shot_creation_rate",
+    "diff_conversion_efficiency",
+    "diff_set_piece_efficiency",
+    "diff_pressing_proxy",
+    "diff_possession_proxy",
+    "diff_continental_score",
+    "diff_elo",
+    "diff_best_rank",
+    "neutral",
+    "comp_type_enc",
+    "abs_diff_elo",
+    "abs_diff_form_10",
+    "abs_diff_gd_trend_10",
+    "abs_diff_goals_scored_10",
+    "abs_diff_goals_conceded_10"
+  ],
+  "classes": [
+    "D",
+    "L",
+    "W"
+  ],
+  "val_logloss": 0.758811274084526,
+  "val_acc": 0.6841324765200197,
+  "test_logloss": 0.924435422687668,
+  "test_acc": 0.5747740345110929,
+  "train_cutoff": "2022-01-01",
+  "val_cutoff": "2024-01-01",
+  "all_results": {
+    "LR_cal": {
+      "val_logloss": 0.8982505017568354,
+      "val_acc": 0.5946613939693525,
+      "test_logloss": 0.9045435188394756,
+      "test_acc": 0.5875102711585867
+    },
+    "RF_cal": {
+      "val_logloss": 0.8653344958397843,
+      "val_acc": 0.6010874938210579,
+      "test_logloss": 0.9199792280487331,
+      "test_acc": 0.5838126540673788
+    },
+    "XGB_cal": {
+      "val_logloss": 0.758811274084526,
+      "val_acc": 0.6841324765200197,
+      "test_logloss": 0.924435422687668,
+      "test_acc": 0.5747740345110929
+    }
+  }
+}

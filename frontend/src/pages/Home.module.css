@@ -1,0 +1,148 @@
+.spinner {
+  display: flex; align-items: center; gap: 10px; color: var(--muted);
+  padding: 3rem; justify-content: center;
+}
+.spinnerDot {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid var(--border); border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Podium */
+.podiumRow {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.podiumCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 24px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 170px;
+  cursor: pointer;
+}
+.podiumCard:nth-child(2) { transform: translateY(-16px); }
+.podiumCard:hover { transform: translateY(-4px) scale(1.02); }
+.podiumCard:nth-child(2):hover { transform: translateY(-20px) scale(1.02); }
+
+.medal { font-size: 1.6rem; line-height: 1; }
+.podiumName { font-weight: 700; font-size: 0.95rem; margin-top: 4px; text-align: center; }
+.podiumGroup { font-size: 0.75rem; color: var(--muted); }
+.podiumPct { display: flex; align-items: baseline; gap: 4px; margin-top: 4px; }
+.podiumBig { font-size: 2rem; font-weight: 800; line-height: 1; }
+.podiumSub { font-size: 0.75rem; color: var(--muted); }
+.podiumMini { display: flex; gap: 10px; font-size: 0.75rem; }
+
+/* Table controls */
+.tableHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.tableTitle { font-size: 1.1rem; font-weight: 700; margin-right: auto; }
+.controls { display: flex; gap: 8px; }
+.search {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  outline: none;
+  width: 200px;
+  transition: border-color 0.15s;
+}
+.search::placeholder { color: var(--muted); }
+.search:focus { border-color: var(--accent); }
+
+.sortSelect {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  outline: none;
+  cursor: pointer;
+}
+.refresh { font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+
+/* Main table */
+.tableWrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: auto;
+}
+.table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.table th {
+  text-align: left; padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted); font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  position: sticky; top: 0;
+  background: rgba(8,12,20,0.9);
+  backdrop-filter: blur(8px);
+}
+.table td { padding: 9px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr { transition: background 0.12s; }
+.table tbody tr:hover td { background: rgba(79,158,255,0.05); }
+.topRow td { font-weight: 600; }
+
+.rankCell { color: var(--muted); width: 32px; font-size: 0.8rem; }
+.teamCell {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--text); text-decoration: none;
+}
+.teamCell:hover span { color: var(--accent); }
+.groupCell { color: var(--accent); font-size: 0.8rem; }
+.eloCell { color: var(--muted); font-size: 0.82rem; }
+
+.noResults { color: var(--muted); padding: 2rem; text-align: center; font-size: 0.9rem; }
+
+.sortBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 4px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.15s;
+  display: flex; align-items: center; gap: 2px;
+}
+.sortBtn:hover { background: rgba(255,255,255,0.06); }
+
+.sortBtnActive {
+  background: rgba(255,255,255,0.07);
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 2px;
+}
+
+.sortArrow { color: var(--muted); font-size: 0.75rem; }

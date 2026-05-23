@@ -1,0 +1,116 @@
+.page { max-width: 720px; margin: 0 auto; }
+.title { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem; }
+.sub { color: var(--muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+
+/* Selector card */
+.selectorCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.teamPicker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pickerSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.select:focus { border-color: var(--accent); }
+
+.vsCircle {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.footer { display: flex; align-items: center; justify-content: space-between; }
+.neutralLabel { display: flex; align-items: center; gap: 7px; font-size: 0.875rem; color: var(--muted); cursor: pointer; }
+
+.predictBtn {
+  display: flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  color: white;
+  border: none; border-radius: 10px;
+  padding: 10px 28px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.predictBtn:not(:disabled):hover { opacity: 0.9; transform: translateY(-1px); }
+.predictBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btnSpinner {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Result card */
+.resultCard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.h2hHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1rem;
+  gap: 1rem;
+}
+
+.h2hTeam { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; }
+.h2hName { font-size: 1.05rem; font-weight: 700; }
+
+.h2hCenter { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.h2hVs { font-size: 0.85rem; color: var(--muted); font-weight: 700; }
+
+/* Prob bars */
+.probSection {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.probBarRow { display: flex; align-items: center; gap: 10px; }
+.probLabel { font-size: 0.82rem; font-weight: 600; min-width: 120px; }
+.probTrack { flex: 1; height: 10px; background: rgba(255,255,255,0.06); border-radius: 99px; overflow: hidden; position: relative; }
+.probFill { height: 100%; border-radius: 99px; transition: width 0.8s cubic-bezier(0.22,1,0.36,1); }
+.probPct { font-size: 0.85rem; font-weight: 700; min-width: 44px; text-align: right; }
+
+/* Big numbers */
+.bigNums { display: flex; padding: 1.25rem 1.5rem; gap: 0; }
+.bigNum { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.bigNum:not(:last-child) { border-right: 1px solid var(--border); }
+.bigNum span:first-child { font-size: 2rem; font-weight: 800; }
+.bigLabel { font-size: 0.75rem; color: var(--muted); }
